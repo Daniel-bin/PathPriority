@@ -1,0 +1,32 @@
+
+
+
+<my-rental-list [rentalList]="rentalList"></my-rental-list>
+
+
+<div style="display:flex; justify-content:space-around; flex-wrap: wrap">
+  
+  <div  
+    *ngFor="let flop of flops$ | async" 
+    class="card bg-dark text-light mb-3">
+    <a [routerLink]="['/flops', flop.id]">
+      <div class="card-body">
+      <img 
+      [src]="flop.imageUrl" 
+      alt=""
+      >
+
+        <div style="display:flex; justify-content:space-between">
+          <button disabled
+            class="btn btn-success btn-sm" 
+            (click)="onClick()"
+            >Rent</button>
+
+
+          <a [routerLink]="['/flops', flop.id, 'edit']">Edit</a>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
