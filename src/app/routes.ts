@@ -11,10 +11,10 @@ export const routingTable = [
   { path: "", redirectTo: "/flops", pathMatch: "full" },
   { path: "watchlist", component: WatchListComponent },
   { path: "actors", component: ActorListComponent },
+  { path: "login", component: LoginComponent },
   { path: "flops", component: FlopListComponent },
   { path: "flops/:id", component: FlopDetailsComponent },
   { path: "flops/:id/edit", component: FlopEditComponent },
   { path: "flops/suggestion", component: FlopSuggestionComponent },
-  { path: "login", component: LoginComponent },
   { path: "**", component: NotFoundComponent }
 ];
